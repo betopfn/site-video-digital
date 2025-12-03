@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-main);
+  height: 100vh;
+  overflow: hidden;
+
+  /* --- FUNDO ANIMADO (CSS PURO) --- */
+  background: linear-gradient(-45deg, #020024, #090979, #290542, #000000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Container que organiza a Sidebar ao lado do Conteúdo */
+.app-layout {
+  display: flex; /* Mágica do Flexbox: coloca os filhos lado a lado */
+  width: 100%;
+  height: 100%; /* Ocupa toda a altura da tela */
+  background: rgba(0, 0, 0, 0.3); /* Escurece levemente para dar contraste */
+  backdrop-filter: blur(
+    5px
+  ); /* Efeito de vidro fosco (opcional, fica bonito) */
+}
+/* Coluna da Esquerda */
+.sidebar {
+  width: 280px; /* Largura fixa para o menu */
+  background-color: rgba(0, 0, 0, 0.5); /* Mais escuro que o resto */
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+}
+/* Coluna da Direita */
+.content {
+  flex: 1; /* Ocupa TODO o espaço que sobrar na tela */
+  padding: 40px;
+  overflow-y: auto; /* Permite rolar SÓ o conteúdo, o menu fica fixo */
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.menu-list {
+  list-style: none;
+}
+
+.menu-item {
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #94a3b8; /* Cinza claro */
+  transition: 0.3s;
+  font-weight: 500;
+}
+.menu-item:hover,
+.menu-item.active {
+  background: rgba(139, 92, 246, 0.2); /* Roxo transparente */
+  color: #a78bfa; /* Roxo claro */
+}
+
+.menu-item.active {
+  border-left: 3px solid #8b5cf6;
+}
+.content {
+  flex: 1; /* Ocupa o resto do espaço */
+  padding: 50px;
+  overflow-y: auto; /* Permite rolar apenas o conteúdo */
+}
+.tag {
+  background: #8b5cf6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.titulo {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+.texto {
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+.video_container {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Animação REC (Mídia Obrigatória: Animação) */
+.rec_indicator {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+}
+.rec_dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6; /* Roxo do tema */
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
