@@ -144,54 +144,53 @@ const bancoDeQuestoes = [
 const conteudos = {
   // MÓDULO 1: INTRODUÇÃO
   intro: `
-    <span class="tag">Módulo 1</span>
-    <h1 class="titulo">Fundamentos do Vídeo Digital</h1>
-    
-    <p class="texto">
-      O vídeo digital não é uma 'fita' contínua, mas sim uma ilusão de ótica. 
-      Tecnicamente, ele é uma representação eletrônica de imagens visuais em movimento na forma de dados digitais codificados. 
-      Diferente do vídeo analógico, que utiliza sinais de onda contínuos, o vídeo digital converte a luz e a cor em sequências binárias (0s e 1s).
-    </p>
+  <span class="tag">Módulo 1</span>
+  <h1 class="titulo">Fundamentos do Vídeo Digital</h1>
+  
+  <p class="texto">
+    O vídeo digital não é uma 'fita' contínua, mas sim uma ilusão de ótica. 
+    Tecnicamente, ele é uma representação eletrônica de imagens visuais em movimento na forma de dados digitais codificados. 
+    Diferente do vídeo analógico, que utiliza sinais de onda contínuos, o vídeo digital converte a luz e a cor em sequências binárias (0s e 1s).
+  </p>
 
-    <h2 class="titulo" style="font-size: 1.8rem">A Ilusão do Movimento</h2>
-    
-    <p class="texto">
-      A base de qualquer vídeo é a <strong>Persistência da Visão</strong>. O que vemos como movimento fluido é, na verdade, uma sucessão rápida de imagens estáticas chamadas frames (quadros). 
-      Quando exibidos em velocidade suficiente, nosso cérebro funde essas imagens em uma ação contínua.
-    </p>
+  <h2 class="titulo" style="font-size: 1.8rem">A Ilusão do Movimento</h2>
+  
+  <p class="texto">
+    A base de qualquer vídeo é a <strong>Persistência da Visão</strong>. O que vemos como movimento fluido é, na verdade, uma sucessão rápida de imagens estáticas chamadas frames (quadros). 
+    Quando exibidos em velocidade suficiente, nosso cérebro funde essas imagens em uma ação contínua.
+  </p>
 
-    <div class="video_container">
-        <div class="rec_indicator">
-            <div class="rec_dot"></div>REC
-        </div>
-        
-        <video controls style="width: 100%; height: 100%; object-fit: contain;">
-            <source src="1000416151.mp4" type="video/mp4">
-            Seu navegador não suporta a tag de vídeo.
-        </video>
-    </div>
+  <div class="video_container">
+      <div class="rec_indicator">
+          <div class="rec_dot"></div>REC
+      </div>
+      
+      <video controls style="width: 100%; height: 100%; object-fit: contain;">
+          <source src="video_com_audio.mp4" type="video/mp4">
+          Seu navegador não suporta a tag de vídeo.
+      </video>
+  </div>
 
-    <h2 class="titulo" style="font-size: 1.8rem">FPS (Frames Per Second)</h2>
-    
-    <p class="texto">
-      A fluidez do vídeo é determinada pelo Frame Rate:
-      <br><br>
-      <strong>24 FPS:</strong> O padrão do cinema. Cria uma estética mais natural e sonhadora (Motion Blur).<br>
-      <strong>30 FPS:</strong> Padrão de TV e transmissões ao vivo.<br>
-      <strong>60 FPS+:</strong> Usado em games e esportes para capturar movimentos muito rápidos com nitidez.
-    </p>
+  <h2 class="titulo" style="font-size: 1.8rem">FPS (Frames Per Second)</h2>
+  
+  <p class="texto">
+    A fluidez do vídeo é determinada pelo Frame Rate:
+    <br><br>
+    <strong>24 FPS:</strong> O padrão do cinema. Cria uma estética mais natural e sonhadora (Motion Blur).<br>
+    <strong>30 FPS:</strong> Padrão de TV e transmissões ao vivo.<br>
+    <strong>60 FPS+:</strong> Usado em games e esportes para capturar movimentos muito rápidos com nitidez.
+  </p>
 
-    <h2 class="titulo" style="font-size: 1.8rem">Resolução e Proporção</h2>
-    
-    <p class="texto">
-      Enquanto o vídeo analógico media qualidade em linhas de varredura, o vídeo digital mede em pixels.
-      <br><br>
-      <strong>HD (1920x1080):</strong> O padrão atual da web.<br>
-      <strong>4K (3840x2160):</strong> Quatro vezes mais pixels que o HD.
-      <br><br>Além da qualidade, temos a proporção da tela (Aspect Ratio), como o 16:9 (Widescreen) ou o 9:16 (Stories/TikTok).
-    </p>
-  `,
-
+  <h2 class="titulo" style="font-size: 1.8rem">Resolução e Proporção</h2>
+  
+  <p class="texto">
+    Enquanto o vídeo analógico media qualidade em linhas de varredura, o vídeo digital mede em pixels.
+    <br><br>
+    <strong>HD (1920x1080):</strong> O padrão atual da web.<br>
+    <strong>4K (3840x2160):</strong> Quatro vezes mais pixels que o HD.
+    <br><br>Além da qualidade, temos a proporção da tela (Aspect Ratio), como o 16:9 (Widescreen) ou o 9:16 (Stories/TikTok).
+  </p>
+`,
   // MÓDULO 2: ILUMINAÇÃO
   iluminacao: `
       <span class="tag" style="background: #eab308;">Módulo 2</span>
@@ -252,10 +251,12 @@ const conteudos = {
          <img src="pedro_medio.jpg" alt="Exemplo de Plano Médio" 
               style="min-width: 220px; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid #555;">
 
-         <img src="pedro_perto.jpg" alt="Exemplo de Close-up" 
-              style="min-width: 220px; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid #555;">
+         <video controls style="min-width: 220px; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid #555;">
+            <source src="close.mp4" type="video/mp4">
+            Seu navegador não suporta a tag de vídeo.
+         </video>
               
-      </div>
+    </div>
   
       <ul style="color: #cbd5e1; line-height: 1.8; margin-left: 20px; margin-bottom: 30px;">
           <li><strong>Plano Geral (Wide):</strong> Mostra o cenário e onde o personagem está.</li>
